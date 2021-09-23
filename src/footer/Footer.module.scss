@@ -1,0 +1,23 @@
+@import "./src/common/styles/sass/variables";
+@import "./src/common/styles/sass/mixin";
+
+.footer {
+    background-color: dimgrey;
+    @include paddingForContainer;
+}
+
+.footerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footerColumnContainer {
+    margin-top: 30px;
+    background-color: #99d0fb;
+    border: 1px solid;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}

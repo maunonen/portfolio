@@ -1,0 +1,21 @@
+.mainBlock {
+    height: 100vh;
+    background-color: lightgreen;
+}
+
+.greetingBlock {
+    background-color: lightgray;
+    width: 300px;
+}
+
+.photoBlock {
+    background-color: aquamarine;
+}
+.photo {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+}
+.container {
+
+}

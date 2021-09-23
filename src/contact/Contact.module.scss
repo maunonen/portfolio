@@ -1,0 +1,31 @@
+@import "./src/common/styles/sass/variables";
+@import "./src/common/styles/sass/mixin";
+
+.contact {
+  background-color: $bgSecondColor;
+  @include paddingForContainer();
+}
+
+.contactForm {
+  width: 80%;
+  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contactContainer {
+  display: flex;
+  justify-content: center;
+
+}
+
+.formInput {
+  width: 100%;
+}
+
+@media screen and (max-width: 624px) {
+  .skills {
+    justify-content: center;
+  }
+}

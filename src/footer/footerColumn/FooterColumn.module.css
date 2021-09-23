@@ -1,0 +1,8 @@
+.footerColumn {
+    background-color: indianred;
+}
+.footerColumnContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
