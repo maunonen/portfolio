@@ -2,17 +2,38 @@
 @import "./src/common/styles/sass/mixin";
 
 .contact {
-  background-color: $bgSecondColor;
+  background-color: $bgPrimaryColor;
   @include paddingForContainer();
 }
 
+.contactBlock {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+
+  .contactInfoBlock {
+    flex: 1;
+
+    .details {
+      @include text($fontFamilySecondary, 18px, 1.8);
+      color: $fontColorGrey;
+      padding-right: 100px;
+    }
+  }
+
+  .contactFormBlock {
+    flex: 1;
+  }
+}
+
+
 .contactForm {
-  width: 80%;
-  background-color: aqua;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
+
 
 .contactContainer {
   display: flex;

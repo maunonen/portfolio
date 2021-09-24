@@ -1,0 +1,50 @@
+@import "./src/common/styles/sass/variables";
+@import "./src/common/styles/sass/mixin";
+
+.mainBlock {
+  height: 100vh;
+  background-color: $bgPrimaryColor;
+
+  .greetingBlock {
+    width: 300px;
+
+    .title {
+      @include text($fontFamilyPrimary, 45px, 1.4);
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .areas {
+      ul {
+        list-style-type: none;
+        padding: 0px 0px;
+        li {
+          padding: 8px 0;
+        }
+
+        .arrowSvg {
+          display: flex;
+          align-items: center;
+          height: 100%;
+        }
+
+        .profileTitle {
+          @include text($fontFamilySecondary, 17px, 28px)
+          font-weight: 400;
+          letter-spacing: 0.2px;
+          text-decoration: none;
+          padding-right: 20px;
+        }
+      }
+    }
+  }
+
+  .photoBlock {
+    /*background-color: aquamarine;*/
+    .photo {
+      width: 300px;
+      height: 400px;
+      object-fit: contain;
+    }
+  }
+}

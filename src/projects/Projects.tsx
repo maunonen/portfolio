@@ -4,12 +4,14 @@ import styleContainer from '../common/styles/Container.module.css'
 import Project from './project/Project'
 import imageUrl from '../assets/img/projectMock.png'
 import Title from "../common/components/title/Title";
+import Subtitle from "../common/components/subtitle/Subtitle";
 
 const Projects: React.FC = () => {
     return (
         <div className={s.projectsBlock}>
             <div className={` ${styleContainer.container} ${s.projectsContainer}`}>
-                <Title title={"Projects"}/>
+                <Subtitle text={"Projects"}/>
+                <Title text={"Recent projects"}/>
                 <div className={s.projects}>
                     <Project
                         title={"Car rental service"}

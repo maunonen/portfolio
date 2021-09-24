@@ -16,7 +16,7 @@ const Footer = () => {
     return (
         <div className={s.footer}>
             <div className={` ${styleContainer.container} ${s.footerContainer}`}>
-                <Title title={"Alexander Maunonen"}/>
+                <Title text={"Alexander Maunonen"}/>
                 <div className={s.footerColumnContainer}>
                     <FooterColumn itemList={columnList}/>
                     <FooterColumn itemList={columnList}/>

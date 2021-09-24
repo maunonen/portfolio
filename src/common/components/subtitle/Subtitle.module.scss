@@ -1,0 +1,15 @@
+@import "./src/common/styles/sass/variables";
+@import "./src/common/styles/sass/mixin";
+.subtitle {
+    h3 {
+        @include text($subTitleFont, 18px, 1.8);
+        text-transform: capitalize;
+        margin: 0 0 0;
+        letter-spacing: 0.2px;
+        margin-bottom: 10px;
+        font-weight: 500;
+        position: relative;
+        color: $subTitleColor;
+    }
+}
+

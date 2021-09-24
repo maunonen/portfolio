@@ -3,18 +3,18 @@
 
 .skillsBlock {
     /*height: 100vh;*/
-    background-color: lightgreen;
     @include paddingForContainer();
     background-color: $bgSecondColor;
 }
 
 .skillsContainer {
     flex-direction: column;
+    align-items: flex-start;
     justify-content: flex-start;
 }
 
 .skills{
-    margin-top: 30px;
+    margin-top: 90px;
     border: 1px solid;
     width: 100%;
     display: flex;
