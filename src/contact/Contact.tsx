@@ -4,6 +4,7 @@ import styleContainer from "../common/styles/Container.module.css";
 import Title from "../common/components/title/Title";
 import Subtitle from "../common/components/subtitle/Subtitle";
 import StyledInput from "../common/components/input/StyledInput";
+import StyledTextArea from "../common/components/textarea/StyledTextArea";
 
 const Contact = () => {
     const [subject, setSubject] = useState<string | undefined>()
@@ -14,7 +15,6 @@ const Contact = () => {
         let value = e.currentTarget.value;
         if (e.currentTarget.dataset.contact) {
             const trigger: string = e.currentTarget.dataset.contact;
-
             if (trigger === 'name') {
                 setName(value);
             } else if (trigger === 'subject') {
@@ -22,6 +22,7 @@ const Contact = () => {
             }
         }
     }
+
 
     const handleArea = (e: ChangeEvent<HTMLTextAreaElement>) => {
         if (e.target.value) {
@@ -67,14 +68,12 @@ const Contact = () => {
                                     placeholder={"Name"}
                                     value={name}
                                 />
-                                <label>
-                                    Message:
-                                    <textarea
-                                        value={message}
-                                        onChange={handleArea}
-                                        rows={5}
-                                        className={s.formInput}></textarea>
-                                </label>
+                                <StyledTextArea
+                                    onChangeText={setMessage}
+                                    value={message}
+                                    rows={4}
+                                    placeholder={"Message"}
+                                />
                                 <button type={"submit"} value={"submit"}>Submit</button>
                             </form>
                         </div>

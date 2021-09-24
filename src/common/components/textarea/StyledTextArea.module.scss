@@ -1,0 +1,35 @@
+@import "./src/common/styles/sass/variables";
+@import "./src/common/styles/sass/mixin";
+
+.textAreaBlock {
+    margin-bottom: 30px;
+    .styledInput {
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0);
+        padding: 10px 10px;
+        outline: none;
+        /*margin-bottom: 30px;*/
+        transition: 0.3s;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-sizing: border-box;
+        &:focus {
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+        /*style for text*/
+        @include text($fontFamilyPrimary, 14px, 1.6);
+        letter-spacing: 1.4px;
+        color: $fontColorGrey;
+    }
+}
+
+.errorInput {
+    border: 1px solid $bgColorError;
+    background: $subTitleColor;
+    transition: 0.3s;
+}
+
+.error {
+    color: #a53f3f;
+}
+
+
