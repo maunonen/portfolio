@@ -5,6 +5,7 @@ import Title from "../common/components/title/Title";
 import Subtitle from "../common/components/subtitle/Subtitle";
 import StyledInput from "../common/components/input/StyledInput";
 import StyledTextArea from "../common/components/textarea/StyledTextArea";
+import StyledButton from "../common/components/button/StyledButton";
 
 const Contact = () => {
     const [subject, setSubject] = useState<string | undefined>()
@@ -74,7 +75,11 @@ const Contact = () => {
                                     rows={4}
                                     placeholder={"Message"}
                                 />
-                                <button type={"submit"} value={"submit"}>Submit</button>
+                                <StyledButton
+                                    onClick={handleSubmit}
+                                    type={"submit"}
+                                >Submit</StyledButton>
+                                {/*<button type={"submit"} value={"submit"}>Submit</button>*/}
                             </form>
                         </div>
                     </div>

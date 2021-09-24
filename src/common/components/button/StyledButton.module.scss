@@ -1,0 +1,22 @@
+@import "./src/common/styles/sass/variables";
+@import "./src/common/styles/sass/mixin";
+
+.default {
+  width: 100%;
+  border: none;
+  background-color: $buttonBgColorPrimary;
+  display: inline-block;
+  padding: 8px 20px;
+  text-decoration: none;
+  outline: none;
+  @include text($fontFamilySecondary, 18px, 1.7);
+  font-weight: 600;
+
+  &:hover {
+    background-color: $buttonBgColorSecondary;
+  }
+
+  &:disabled {
+    background-color: $bgSecondColor;
+  }
+}
