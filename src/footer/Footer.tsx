@@ -4,22 +4,21 @@ import styleContainer from "../common/styles/Container.module.css";
 import FooterColumn, {FooterItemType} from "./footerColumn/FooterColumn";
 import Title from "../common/components/title/Title";
 
-const columnList : FooterItemType[] =[
-    { itemText : "some 1", itemLink: "http://890e2", id : "1"},
-    { itemText : "some 2", itemLink: "http://890e2", id : "2"},
-    { itemText : "some 3 ", itemLink: "http://890e2", id : "3"},
-    { itemText : "some 4", itemLink: "http://890e2", id : "4"},
+const columnList: FooterItemType[] = [
+    {itemText: "some 1", itemLink: "#", id: "1"},
+    {itemText: "some 2", itemLink: "#", id: "2"},
+    {itemText: "some 3 ", itemLink: "#", id: "3"},
+    {itemText: "some 4", itemLink: "#", id: "4"},
 ]
 
 const Footer = () => {
 
     return (
         <div className={s.footer}>
-            <div className={` ${styleContainer.container} ${s.footerContainer}`}>
-                <Title text={"Alexander Maunonen"}/>
-                <div className={s.footerColumnContainer}>
-                    <FooterColumn itemList={columnList}/>
-                    <FooterColumn itemList={columnList}/>
+            <div className={`${styleContainer.container} ${s.footerBlock}`}>
+                <div className={s.copyrigth}>Copyright © 2021. All rights reserved.</div>
+                {/*<Title text={"Alexander Maunonen"}/>*/}
+                <div className={s.footerSocialBlock}>
                     <FooterColumn itemList={columnList}/>
                 </div>
             </div>

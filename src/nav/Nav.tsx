@@ -1,18 +1,15 @@
 import React from 'react';
-import s from './Nav.module.css'
+import s from './Nav.module.scss'
 
 const  Nav : React.FC = () => {
     return (
         <div className={s.nav}>
-            <a href={""}>Main</a>
-            <a href={""}>Skills</a>
-            <a href={""}>Project</a>
-            <a href={""}>Contact</a>
-            {/*<ul className={s.nav_list}>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-            </ul>*/}
+            <ul>
+                <li><a href={""}>Main</a></li>
+                <li><a href={""}>Skills</a></li>
+                <li><a href={""}>Project</a></li>
+                <li><a href={""}>Contact</a></li>
+            </ul>
         </div>
     );
 }

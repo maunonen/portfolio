@@ -17,7 +17,7 @@ const FooterColumn: React.FC<FooterColumnPropsType> = (props) => {
 
     return (
         <div className={s.footerColumn}>
-            <div className={` ${styleContainer.container} ${s.footerColumnContainer}`}>
+            <div className={s.footerColumnContainer}>
                 {
                     props.itemList.length > 0 && props.itemList.map((item) => {
                         return <a key={item.id} href={item.itemLink}>{item.itemText}</a>

@@ -1,0 +1,15 @@
+@import "./src/common/styles/sass/variables";
+@import "./src/common/styles/sass/mixin";
+.header {
+    /*height: 80px;*/
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: $bgPrimaryColor;
+    display: flex;
+    .headerContainer {
+        justify-content: flex-end;
+        align-items: flex-start;
+    }
+}

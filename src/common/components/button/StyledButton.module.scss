@@ -11,9 +11,10 @@
   outline: none;
   @include text($fontFamilySecondary, 18px, 1.7);
   font-weight: 600;
-
+  transition-delay: 0.1s;
   &:hover {
     background-color: $buttonBgColorSecondary;
+    transition-delay: 0.1s;
   }
 
   &:disabled {

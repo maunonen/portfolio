@@ -10,10 +10,9 @@ import IconList, {IconListItemType} from "../common/components/iconlist/IconList
 import ArrowRightIcon from "../common/svg/ArrowRightIcon";
 
 const iconList: IconListItemType[] = [
-    {svgIcon: <ArrowRightIcon color={"#ff4522"}/>, itemText: "44 Place, Tokyo, Japan"},
-    {svgIcon: <ArrowRightIcon color={"#ff4522"}/>, itemText: "+77 033 442 55 57"},
-    {svgIcon: <ArrowRightIcon color={"#ff4522"}/>, itemText: "dodo@gmail.com"},
-    {svgIcon: <ArrowRightIcon color={"#ff4522"}/>, itemText: "www.domain.com"},
+    {svgIcon: <ArrowRightIcon color={"#ff4522"}/>, itemText: "Helsinki, Finland"},
+    {svgIcon: <ArrowRightIcon color={"#ff4522"}/>, itemText: "santari33@gmail.com"},
+    {svgIcon: <ArrowRightIcon color={"#ff4522"}/>, itemText: "www.maunonen.io"},
 ]
 
 
@@ -84,7 +83,6 @@ const Contact = () => {
                                     onClick={handleSubmit}
                                     type={"submit"}
                                 >Submit</StyledButton>
-                                {/*<button type={"submit"} value={"submit"}>Submit</button>*/}
                             </form>
                         </div>
                     </div>

@@ -1,0 +1,27 @@
+@import "./src/common/styles/sass/variables";
+@import "./src/common/styles/sass/mixin";
+
+.nav {
+    /*border: 1px solid;*/
+    background-color: $bgPrimaryColor;
+    ul {
+        padding-inline-start: 0px;
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+        li {
+            padding: 7px 25px;
+        }
+        a {
+            text-decoration: none;
+            @include text($fontFamilyPrimary, 16px, 1.8);
+            font-weight: 500;
+            &:hover {
+                color: $buttonBgColorPrimary;
+            }
+        }
+    }
+}
+.nav_list {
+    display: inline-block;
+}
