@@ -3,6 +3,7 @@ import s from './Contact.module.scss'
 import styleContainer from "../common/styles/Container.module.css";
 import Title from "../common/components/title/Title";
 import Subtitle from "../common/components/subtitle/Subtitle";
+import StyledInput from "../common/components/input/StyledInput";
 
 const Contact = () => {
     const [subject, setSubject] = useState<string | undefined>()
@@ -41,12 +42,12 @@ const Contact = () => {
                     <Title text={"Get in touch"}/>
                     <div className={s.contactBlock}>
                         <div className={s.contactInfoBlock}>
-                            <p className={s.details}>
+                            <div className={s.details}>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, pulvinar
                                 facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus.
                                 Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet ex, in pretium
                                 orci vestibulum eget.
-                            </p>
+                            </div>
                             <ul>
                                 <li>item 1</li>
                                 <li>item 2</li>
@@ -55,22 +56,17 @@ const Contact = () => {
                         </div>
                         <div className={s.contactFormBlock}>
                             <form onSubmit={handleSubmit}>
-                                <label>
-                                    Subject:
-                                    <input
-                                        data-contact="name"
-                                        value={name}
-                                        onChange={handleInput}
-                                        className={s.formInput}/>
-                                </label>
-                                <label>
-                                    Name:
-                                    <input
-                                        data-contact="subject"
-                                        value={subject}
-                                        onChange={handleInput}
-                                        className={s.formInput}/>
-                                </label>
+                                <StyledInput
+                                    onChangeText={setSubject}
+                                    placeholder={"Subject"}
+                                    value={subject}
+                                    /*error={"some error"}*/
+                                />
+                                <StyledInput
+                                    onChangeText={setName}
+                                    placeholder={"Name"}
+                                    value={name}
+                                />
                                 <label>
                                     Message:
                                     <textarea
