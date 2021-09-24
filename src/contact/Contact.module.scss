@@ -17,6 +17,7 @@
     .details {
       @include text($fontFamilySecondary, 18px, 1.8);
       color: $fontColorGrey;
+      margin-bottom: 42px;
       padding-right: 100px;
     }
   }

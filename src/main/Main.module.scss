@@ -29,8 +29,7 @@
         }
 
         .profileTitle {
-          @include text($fontFamilySecondary, 17px, 28px)
-          font-weight: 400;
+          @include text($fontFamilySecondary, 17px, 28px);
           letter-spacing: 0.2px;
           text-decoration: none;
           padding-right: 20px;

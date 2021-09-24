@@ -1,4 +1,4 @@
-import React, {ChangeEvent, useState} from 'react';
+import React, {ChangeEvent, useState, ReactComponentElement} from 'react';
 import s from './Contact.module.scss'
 import styleContainer from "../common/styles/Container.module.css";
 import Title from "../common/components/title/Title";
@@ -6,6 +6,16 @@ import Subtitle from "../common/components/subtitle/Subtitle";
 import StyledInput from "../common/components/input/StyledInput";
 import StyledTextArea from "../common/components/textarea/StyledTextArea";
 import StyledButton from "../common/components/button/StyledButton";
+import IconList, {IconListItemType} from "../common/components/iconlist/IconList";
+import ArrowRightIcon from "../common/svg/ArrowRightIcon";
+
+const iconList: IconListItemType[] = [
+    {svgIcon: <ArrowRightIcon color={"#ff4522"}/>, itemText: "44 Place, Tokyo, Japan"},
+    {svgIcon: <ArrowRightIcon color={"#ff4522"}/>, itemText: "+77 033 442 55 57"},
+    {svgIcon: <ArrowRightIcon color={"#ff4522"}/>, itemText: "dodo@gmail.com"},
+    {svgIcon: <ArrowRightIcon color={"#ff4522"}/>, itemText: "www.domain.com"},
+]
+
 
 const Contact = () => {
     const [subject, setSubject] = useState<string | undefined>()
@@ -23,7 +33,6 @@ const Contact = () => {
             }
         }
     }
-
 
     const handleArea = (e: ChangeEvent<HTMLTextAreaElement>) => {
         if (e.target.value) {
@@ -50,11 +59,7 @@ const Contact = () => {
                                 Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet ex, in pretium
                                 orci vestibulum eget.
                             </div>
-                            <ul>
-                                <li>item 1</li>
-                                <li>item 2</li>
-                                <li>item 3</li>
-                            </ul>
+                            <IconList items={iconList}/>
                         </div>
                         <div className={s.contactFormBlock}>
                             <form onSubmit={handleSubmit}>

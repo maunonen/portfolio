@@ -5,7 +5,7 @@ type DefaultButtonPropsType = DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonE
 
 export interface StyledButtonPropsType extends DefaultButtonPropsType {
     red?: boolean
-    withArrow? : boolean;
+    withArrow? : boolean
 }
 
 const StyledButton: React.FC<StyledButtonPropsType> = (props) => {
