@@ -7,8 +7,8 @@ export interface IconListPropsType {
 }
 
 export interface IconListItemType {
-    svgIcon?: JSX.Element
-    itemText: string
+    svgIcon: JSX.Element
+    iconLink : string
 }
 
 const IconList: React.FC<IconListPropsType> = (props) => {
@@ -17,26 +17,19 @@ const IconList: React.FC<IconListPropsType> = (props) => {
     } = props
 
     let iconListJSX = items.map((item, index) => (
-            <li key={index}>
-                <div className={s.itemIconBlock}>
-                    <div className={s.itemIcon}>
-                        {item.svgIcon}
-                    </div>
-                    <span className={s.itemText}>{item.itemText}</span>
-                </div>
-            </li>
+            <div key={index} className={s.itemIcon}>
+                <a href={item.iconLink}>{item.svgIcon}</a>
+            </div>
         )
     )
 
     return (
-        <>
-            <ul className={s.iconListBlock}>
-                {
-                    iconListJSX
-                }
-            </ul>
-        </>
+        <div className={s.itemIconBlock}>
+            {
+                iconListJSX && iconListJSX
+            }
+        </div>
     );
-}
+};
 
 export default IconList;

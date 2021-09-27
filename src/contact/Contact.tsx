@@ -6,7 +6,7 @@ import Subtitle from "../common/components/subtitle/Subtitle";
 import StyledInput from "../common/components/input/StyledInput";
 import StyledTextArea from "../common/components/textarea/StyledTextArea";
 import StyledButton from "../common/components/button/StyledButton";
-import IconList, {IconListItemType} from "../common/components/iconlist/IconList";
+import TextIconList, {IconListItemType} from "../common/components/texticonslist/TextIconList";
 import ArrowRightIcon from "../common/svg/ArrowRightIcon";
 
 const iconList: IconListItemType[] = [
@@ -58,7 +58,7 @@ const Contact = () => {
                                 Donec scelerisque sollicitudin enim eu venenatis. Duis tincidunt laoreet ex, in pretium
                                 orci vestibulum eget.
                             </div>
-                            <IconList items={iconList}/>
+                            <TextIconList items={iconList}/>
                         </div>
                         <div className={s.contactFormBlock}>
                             <form onSubmit={handleSubmit}>

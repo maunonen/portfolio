@@ -1,24 +1,15 @@
 @import "./src/common/styles/sass/variables";
 @import "./src/common/styles/sass/mixin";
 
-.iconListBlock {
-  list-style-type: none;
-  padding: 0px 0px;
-  li {
-    margin-bottom: 23px;
-  }
-  .itemIconBlock {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    .itemIcon > svg {
-      fill: $buttonBgColorPrimary;
-    }
-    .itemText {
-      @include text($fontFamilyPrimary, 18px, 1.6);
-      padding-left: 30px;
-      font-weight: 500;
-    }
-  }
+.itemIconBlock {
+  display: flex;
+  gap: 25px;
 
+  .itemIcon {
+    svg {
+      width: 15px;
+      height: 15px;
+      width: 100%;
+    }
+  }
 }

@@ -3,13 +3,19 @@ import s from './Footer.module.scss'
 import styleContainer from "../common/styles/Container.module.css";
 import FooterColumn, {FooterItemType} from "./footerColumn/FooterColumn";
 import Title from "../common/components/title/Title";
+import IconList, {IconListItemType, IconListPropsType} from "../common/components/iconlist/IconList";
+import EmailIcon from "../common/svg/EmailIcon";
+import LinkedInIcon from "../common/svg/LinkedInIcon";
+import TelegramIcon from "../common/svg/TelegramIcon";
+import GithubIcon from "../common/svg/GithubIcon";
 
-const columnList: FooterItemType[] = [
-    {itemText: "some 1", itemLink: "#", id: "1"},
-    {itemText: "some 2", itemLink: "#", id: "2"},
-    {itemText: "some 3 ", itemLink: "#", id: "3"},
-    {itemText: "some 4", itemLink: "#", id: "4"},
-]
+
+const iconArray: Array<IconListItemType> = [
+    {svgIcon: <EmailIcon/>, iconLink: "mailto:santari33@gmail.com"},
+    {svgIcon: <TelegramIcon/>, iconLink: "https://telegram.org/maunonen"},
+    {svgIcon: <GithubIcon/>, iconLink: "https://github.com/maunonen"},
+    {svgIcon: <LinkedInIcon/>, iconLink: "https://www.linkedin.com/in/alexander-maunonen-a00aa3176/"},
+];
 
 const Footer = () => {
 
@@ -17,10 +23,7 @@ const Footer = () => {
         <div className={s.footer}>
             <div className={`${styleContainer.container} ${s.footerBlock}`}>
                 <div className={s.copyrigth}>Copyright © 2021. All rights reserved.</div>
-                {/*<Title text={"Alexander Maunonen"}/>*/}
-                <div className={s.footerSocialBlock}>
-                    <FooterColumn itemList={columnList}/>
-                </div>
+                <IconList items={iconArray}/>
             </div>
         </div>
     );
