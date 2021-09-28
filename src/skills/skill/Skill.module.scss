@@ -12,10 +12,27 @@
   text-align: center;
   position: relative;
   margin-bottom: 80px;
+  transition: 0.3s;
+  top: 0;
+
+  &:hover {
+    top: -20px;
+    transition: 0.3s ease-in-out;
+  }
+
+  &:hover .descriptionBlock > .icon {
+    border: 3px solid $textColor;
+    transform: rotate(360deg);
+    transition: 0.5s ease-in-out;
+  }
+
+  /*&:hover > .icon {
+    background-color: greenyellow;
+  }*/
 
   .descriptionBlock {
     padding: 60px 15px 25px;
-    margin-bottom: 40px ;
+    margin-bottom: 40px;
 
     .icon {
       position: absolute;
@@ -32,6 +49,7 @@
       justify-content: center;
       border-radius: 100%;
       border: 3px solid $bgPrimaryColor;
+      transition: transform .7s ease-in-out;
 
       svg {
         height: 35px;
@@ -40,7 +58,7 @@
     }
 
     .title {
-      margin-block-start : 0px;
+      margin-block-start: 0px;
       margin-block-end: 0px;
       display: block;
       @include text($fontFamilyPrimary, 18px, 1.6);
@@ -51,7 +69,7 @@
     .description {
       margin-bottom: 20px;
       @include text($fontFamilyPrimary, 15px, 1.8);
-      color: $fontColorGrey ;
+      color: $fontColorGrey;
     }
   }
 
@@ -65,11 +83,9 @@
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    /*border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;*/
+
     img {
       width: 45px;
-      /*height: 40px;*/
     }
   }
 }

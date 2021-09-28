@@ -18,7 +18,6 @@ const Skill: React.FC<SkillPropsType> = (props) => {
             <div className={s.descriptionBlock}>
                 <div className={s.icon}>
                     {svgIcon}
-                    {/*<GithubIcon color={"#fff"}/>*/}
                 </div>
                 <h3 className={s.title}>{title}</h3>
                 <span className={s.description}>{description}</span>
