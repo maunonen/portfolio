@@ -7,7 +7,7 @@ export interface EmailIconPropsType {
     height?: string
 }
 
-const EmailIcon: React.FC<EmailIconPropsType> = (props) => {
+const GithubIcon: React.FC<EmailIconPropsType> = (props) => {
     const {color, width, height} = props
     return (
         <svg
@@ -34,4 +34,4 @@ const EmailIcon: React.FC<EmailIconPropsType> = (props) => {
     );
 }
 
-export default EmailIcon;
+export default GithubIcon;

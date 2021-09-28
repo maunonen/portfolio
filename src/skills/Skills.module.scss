@@ -5,6 +5,7 @@
     /*height: 100vh;*/
     @include paddingForContainer();
     background-color: $bgSecondColor;
+
 }
 
 .skillsContainer {
@@ -15,11 +16,12 @@
 
 .skills{
     margin-top: 90px;
-    border: 1px solid;
+    /*border: 1px solid;*/
     width: 100%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    gap: 80px;
 }
 
 @media screen and (max-width: 624px){

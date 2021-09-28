@@ -9,10 +9,9 @@ import LinkedInIcon from "../common/svg/LinkedInIcon";
 import TelegramIcon from "../common/svg/TelegramIcon";
 import GithubIcon from "../common/svg/GithubIcon";
 
-
 const iconArray: Array<IconListItemType> = [
     {svgIcon: <EmailIcon/>, iconLink: "mailto:santari33@gmail.com"},
-    {svgIcon: <TelegramIcon/>, iconLink: "https://telegram.org/maunonen"},
+    {svgIcon: <TelegramIcon/>, iconLink: "https://telegram.im/@maunonen"},
     {svgIcon: <GithubIcon/>, iconLink: "https://github.com/maunonen"},
     {svgIcon: <LinkedInIcon/>, iconLink: "https://www.linkedin.com/in/alexander-maunonen-a00aa3176/"},
 ];
