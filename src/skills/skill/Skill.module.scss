@@ -3,7 +3,7 @@
 
 .skill {
   border-radius: 5px;
-  width: 295px;
+  width: 250px;
   min-height: 200px;
   background-color: $bgPrimaryColor;
   display: flex;
@@ -11,7 +11,7 @@
   flex-direction: column;
   text-align: center;
   position: relative;
-  /*margin-bottom: 80px;*/
+  margin-bottom: 80px;
 
   .descriptionBlock {
     padding: 60px 15px 25px;
@@ -34,8 +34,8 @@
       border: 3px solid $bgPrimaryColor;
 
       svg {
-        height: 30px;
-        width: 30px;
+        height: 35px;
+        width: 35px;
       }
     }
 

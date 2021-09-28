@@ -3,51 +3,82 @@
 
 
 .project {
+  /*border: 1px solid white;*/
+  background-color: #4e93e6;
   width: 450px;
+  height: 300px;
+  border-radius: 10px;
+  background-color: green;
+  border-radius: 8px;
   display: flex;
-  flex-direction: column;
-  background-color: $bgSecondColor;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
 
-  .imageBlock {
-    background-color: lightsalmon;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-
-    &::before {
-      position: absolute;
-      content: "";
-      background-color: black;
-      opacity: 0.3;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-    }
-
-    .preview {
-      background-color: $primaryColor;
-      padding: 10px 20px;
-      position: relative;
-      z-index: 1;
-      color: $textColor;
-    }
+  &:hover .hoverBlock {
+    transition: 0.3s;
+    opacity: 1;
   }
 
-  .projectInfo {
-    padding: 25px 20px;
+  .hoverBlock {
+    transition: 0.3s;
+    opacity: 0;
+    background-color: rgba(31, 31, 32, 0.96);
+    width: 95%;
+    height: 92%;
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    /*visibility: hidden;*/
 
-    .title {
-      @include text($fontFamilyPrimary, 20px, 1.2);
-      letter-spacing: 1px;
-      margin: 0 0 5px;
-    }
+    .hoverContentBlock {
+      padding: 30px;
 
-    .description {
-      @include text($fontFamilySecondary, 14px, 1.2);
-      font-weight: 400;
+      a {
+        text-decoration: none;
+      }
+
+      .title {
+        @include text($fontFamilyPrimary, 20px, 1.2);
+        font-weight: 700;
+        letter-spacing: 0.2px;
+        margin: 0 0 5px;
+      }
+
+      .description {
+        @include text($fontFamilySecondary, 16px, 1.8);
+        font-weight: 400;
+      }
     }
+  ;
+  }
+
+
+  /*background-color: lightsalmon;*/
+  /*height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;*/
+
+  /*&::before {
+    position: absolute;
+    content: "";
+    background-color: black;
+    opacity: 0.3;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+*/
+  .preview {
+    /* background-color: $primaryColor;
+     padding: 10px 20px;
+     position: relative;
+     z-index: 1;
+     color: $textColor;*/
   }
 }

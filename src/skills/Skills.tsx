@@ -26,6 +26,10 @@ const skillList: Array<SkillPropsType> = [
         svgIcon: <TelegramIcon/>, title: "Telegram",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     },
+    {
+        svgIcon: <TelegramIcon/>, title: "Telegram",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    },
 ]
 
 const Skills: React.FC = () => {

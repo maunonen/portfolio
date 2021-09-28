@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './Project.module.scss'
-import projectImage from '../../assets/img/projectMock.png'
+import rentalProject from '../../assets/img/rental.png';
 
 export interface SkillPropsType {
     title: string
@@ -12,20 +12,20 @@ export interface SkillPropsType {
 const Project: React.FC<SkillPropsType> = (props) => {
     const {title, description, imageAlt, imageUrl} = props
     return (
-        <div className={s.project}>
-            <div className={s.imageBlock}
-                 style={{
-                     backgroundImage: `url(${imageUrl})`,
-                     backgroundPosition: 'center',
-                     backgroundSize: 'cover',
-                     backgroundRepeat: 'no-repeat',
-                 }}>
-                <a className={s.preview} href={"#"}>Preview</a>
-                {/*<img src={imageUrl} alt={imageAlt && imageAlt} className={s.image} />*/}
-            </div>
-            <div className={s.projectInfo}>
-                <h3 className={s.title}>{title}</h3>
-                <span className={s.description}>{description}</span>
+        <div className={s.project}  style={{
+            backgroundImage: `url(${imageUrl})`,
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+        }}>
+
+            <div className={s.hoverBlock}>
+                <div className={s.hoverContentBlock}>
+                    <a className={s.preview} href={"#"}>
+                        <h3 className={s.title}>{title}</h3>
+                    </a>
+                    <span className={s.description}>{description}</span>
+                </div>
             </div>
         </div>
     );
