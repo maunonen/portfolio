@@ -2,6 +2,7 @@ import React from 'react';
 import s from './Main.module.scss'
 import styleContainer from '../common/styles/Container.module.css'
 import photoUrl from '../assets/img/myFoto.png'
+import testImage from '../assets/img/testImage.jpeg'
 import Subtitle from "../common/components/subtitle/Subtitle";
 import ArrowRightIcon from "../assets/svg/ArrowRightIcon";
 
@@ -36,7 +37,19 @@ const Main: React.FC = () => {
                     </div>
                 </div>
                 <div className={s.photoBlock}>
-                    <img alt={"My photo"} src={photoUrl} className={s.photo}/>
+                {/*<div>*/}
+                    <div className={s.photo}>
+                        <div
+                            className={s.pseudoParent}
+                            style={{
+                           backgroundImage: `url(${testImage})`,
+                           backgroundPosition: 'center',
+                           backgroundSize: 'cover',
+                           backgroundRepeat: 'no-repeat',
+                       }}
+                        >
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

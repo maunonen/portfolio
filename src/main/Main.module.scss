@@ -18,6 +18,7 @@
       ul {
         list-style-type: none;
         padding: 0px 0px;
+
         li {
           padding: 8px 0;
         }
@@ -39,11 +40,34 @@
   }
 
   .photoBlock {
-    /*background-color: aquamarine;*/
     .photo {
-      width: 300px;
-      height: 400px;
-      object-fit: contain;
+      background: green;
+      position: relative;
+      height: 530px;
+      width: 400px;
+      border-radius: 8px;
+      transform: rotate(8deg);
+      z-index: 1;
+
+      .pseudoParent {
+        position: absolute;
+        height: 530px;
+        width: 400px;
+        border-radius: 8px;
+
+        &:after {
+          position: absolute;
+          z-index: -1;
+          background: $buttonBgColorPrimary;
+          height: 524px;
+          width: 400px;
+          content: "";
+          left: -80px;
+          bottom: -30px;
+          border-radius: 8px;
+          transform: rotate(-12deg);
+        }
+      }
     }
   }
 }
