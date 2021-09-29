@@ -3,7 +3,7 @@ import s from './Main.module.scss'
 import styleContainer from '../common/styles/Container.module.css'
 import photoUrl from '../assets/img/myFoto.png'
 import Subtitle from "../common/components/subtitle/Subtitle";
-import ArrowRightIcon from "../common/svg/ArrowRightIcon";
+import ArrowRightIcon from "../assets/svg/ArrowRightIcon";
 
 const Main: React.FC = () => {
     return (

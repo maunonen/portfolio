@@ -29,7 +29,6 @@ const EmailIcon: React.FC<EmailIconPropsType> = (props) => {
                 </g>
             </g>
         </svg>
-
     );
 }
 

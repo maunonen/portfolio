@@ -48,8 +48,8 @@
       align-items: center;
       justify-content: center;
       border-radius: 100%;
-      border: 3px solid $bgPrimaryColor;
       transition: transform .7s ease-in-out;
+      border: 3px solid $bgPrimaryColor;
 
       svg {
         height: 35px;

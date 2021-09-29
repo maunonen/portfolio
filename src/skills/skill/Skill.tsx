@@ -1,9 +1,9 @@
 import React from 'react';
 import s from './Skill.module.scss'
-import TelegramIcon from "../../common/svg/TelegramIcon";
+import TelegramIcon from "../../assets/svg/TelegramIcon";
 import CornerUrl from '../../../src/assets/img/corner.png';
-import EmailIcon from "../../common/svg/EmailIcon";
-import GithubIcon from "../../common/svg/GithubIcon";
+import EmailIcon from "../../assets/svg/EmailIcon";
+import GithubIcon from "../../assets/svg/GithubIcon";
 
 export interface SkillPropsType {
     title: string

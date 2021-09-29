@@ -7,7 +7,7 @@ import StyledInput from "../common/components/input/StyledInput";
 import StyledTextArea from "../common/components/textarea/StyledTextArea";
 import StyledButton from "../common/components/button/StyledButton";
 import TextIconList, {IconListItemType} from "../common/components/texticonslist/TextIconList";
-import ArrowRightIcon from "../common/svg/ArrowRightIcon";
+import ArrowRightIcon from "../assets/svg/ArrowRightIcon";
 
 const iconList: IconListItemType[] = [
     {svgIcon: <ArrowRightIcon color={"#ff4522"}/>, itemText: "Helsinki, Finland"},

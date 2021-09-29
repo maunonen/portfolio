@@ -4,10 +4,10 @@ import styleContainer from "../common/styles/Container.module.css";
 import FooterColumn, {FooterItemType} from "./footerColumn/FooterColumn";
 import Title from "../common/components/title/Title";
 import IconList, {IconListItemType, IconListPropsType} from "../common/components/iconlist/IconList";
-import EmailIcon from "../common/svg/EmailIcon";
-import LinkedInIcon from "../common/svg/LinkedInIcon";
-import TelegramIcon from "../common/svg/TelegramIcon";
-import GithubIcon from "../common/svg/GithubIcon";
+import EmailIcon from "../assets/svg/EmailIcon";
+import LinkedInIcon from "../assets/svg/LinkedInIcon";
+import TelegramIcon from "../assets/svg/TelegramIcon";
+import GithubIcon from "../assets/svg/GithubIcon";
 
 const iconArray: Array<IconListItemType> = [
     {svgIcon: <EmailIcon/>, iconLink: "mailto:santari33@gmail.com"},
