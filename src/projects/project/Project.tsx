@@ -2,14 +2,14 @@ import React from 'react';
 import s from './Project.module.scss'
 import rentalProject from '../../assets/img/rental.png';
 
-export interface SkillPropsType {
+export interface ProjectPropsType {
     title: string
     description: string
     imageUrl?: string
     imageAlt?: string
 }
 
-const Project: React.FC<SkillPropsType> = (props) => {
+const Project: React.FC<ProjectPropsType> = (props) => {
     const {title, description, imageAlt, imageUrl} = props
     return (
         <div className={s.project}  style={{
