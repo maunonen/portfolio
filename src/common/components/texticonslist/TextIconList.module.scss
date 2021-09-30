@@ -4,21 +4,32 @@
 .iconListBlock {
   list-style-type: none;
   padding: 0px 0px;
+
   li {
     margin-bottom: 23px;
   }
+
   .itemIconBlock {
     display: flex;
     align-items: center;
     height: 100%;
+
     .itemIcon > svg {
       fill: $buttonBgColorPrimary;
     }
+
     .itemText {
       @include text($fontFamilyPrimary, 18px, 1.6);
       padding-left: 30px;
       font-weight: 500;
     }
-  }
 
+    .itemLink {
+      text-decoration: none;
+
+      &:hover .itemText {
+        color: $fontColorGrey
+      }
+    }
+  }
 }

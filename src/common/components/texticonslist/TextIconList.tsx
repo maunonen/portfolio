@@ -9,6 +9,7 @@ export interface TextIconListPropsType {
 export interface IconListItemType {
     svgIcon?: JSX.Element
     itemText: string
+    itemLink?: string
 }
 
 const TextIconList: React.FC<TextIconListPropsType> = (props) => {
@@ -19,10 +20,22 @@ const TextIconList: React.FC<TextIconListPropsType> = (props) => {
     let iconListJSX = items.map((item, index) => (
             <li key={index}>
                 <div className={s.itemIconBlock}>
-                    <div className={s.itemIcon}>
-                        {item.svgIcon}
-                    </div>
-                    <span className={s.itemText}>{item.itemText}</span>
+                    {
+                        item.svgIcon &&
+                        <div className={s.itemIcon}>
+                            {item.svgIcon}
+                        </div>
+                    }
+                    {
+                        item.itemLink
+                            ? (
+                                <a className={s.itemLink} href={item.itemLink}>
+                                    <span className={s.itemText}>{item.itemText}</span>
+                                </a>
+                            )
+                            : <span className={s.itemText}>{item.itemText}</span>
+                    }
+
                 </div>
             </li>
         )

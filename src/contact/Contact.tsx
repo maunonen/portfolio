@@ -10,9 +10,21 @@ import TextIconList, {IconListItemType} from "../common/components/texticonslist
 import ArrowRightIcon from "../assets/svg/ArrowRightIcon";
 
 const iconList: IconListItemType[] = [
-    {svgIcon: <ArrowRightIcon color={"#ff4522"}/>, itemText: "Helsinki, Finland"},
-    {svgIcon: <ArrowRightIcon color={"#ff4522"}/>, itemText: "santari33@gmail.com"},
-    {svgIcon: <ArrowRightIcon color={"#ff4522"}/>, itemText: "www.maunonen.io"},
+    {
+        svgIcon: <ArrowRightIcon color={"#ff4522"}/>,
+        itemText: "Helsinki, Finland",
+    },
+    {
+        svgIcon: <ArrowRightIcon color={"#ff4522"}/>,
+        itemText: "santari33@gmail.com",
+        itemLink : "mailto:santari33@gmail.com"
+
+    },
+    {
+        svgIcon: <ArrowRightIcon color={"#ff4522"}/>,
+        itemText: "github.com",
+        itemLink : "https://github.com/maunonen"
+    },
 ]
 
 
