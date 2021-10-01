@@ -2,10 +2,10 @@
 @import "./src/common/styles/sass/mixin";
 
 .skillsBlock {
-    /*height: 100vh;*/
+    scroll-behavior: smooth;
+    -webkit-scroll-behavior:  smooth !important;
     @include paddingForContainer();
     background-color: $bgSecondColor;
-
 }
 
 .skillsContainer {

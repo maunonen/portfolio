@@ -13,12 +13,16 @@
             padding: 7px 25px;
         }
         a {
+            cursor: pointer;
             text-decoration: none;
             @include text($fontFamilyPrimary, 16px, 1.8);
             font-weight: 500;
             &:hover {
                 color: $buttonBgColorPrimary;
             }
+        }
+        .activeLink {
+            color: $bgColorError;
         }
     }
 }

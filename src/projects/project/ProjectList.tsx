@@ -8,9 +8,8 @@ export interface ProjectListPropsType {
     projectList: Array<ProjectPropsType>
 }
 
-
 const ProjectList: React.FC<ProjectListPropsType> = (props) => {
-    const {projectList}  = props;
+    const {projectList} = props;
     return (
         <>
             {

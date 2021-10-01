@@ -1,5 +1,5 @@
 .container {
-    /*border: 1px solid white;*/
+    scroll-behavior: smooth;
     width: 80%;
     height: 100%;
     margin: 0 auto;

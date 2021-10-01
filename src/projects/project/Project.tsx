@@ -4,7 +4,8 @@ import rentalProject from '../../assets/img/rental.png';
 
 export interface ProjectPropsType {
     title: string
-    description: string
+    projectUrl?: string
+    description?: string
     imageUrl?: string
     imageAlt?: string
 }
@@ -12,7 +13,7 @@ export interface ProjectPropsType {
 const Project: React.FC<ProjectPropsType> = (props) => {
     const {title, description, imageAlt, imageUrl} = props
     return (
-        <div className={s.project}  style={{
+        <div className={s.project} style={{
             backgroundImage: `url(${imageUrl})`,
             backgroundPosition: 'center',
             backgroundSize: 'cover',

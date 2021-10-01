@@ -1,6 +1,8 @@
 @import "~normalize.css/normalize.css";
 .App {
   text-align: center;
+  scroll-behavior: smooth;
+  -webkit-scroll-behavior:  smooth !important;
 }
 
 .App-logo {

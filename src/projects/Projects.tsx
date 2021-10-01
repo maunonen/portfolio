@@ -41,7 +41,7 @@ const projectArray : ProjectPropsType[] = [
 
 const Projects: React.FC = () => {
     return (
-        <div className={s.projectsBlock}>
+        <div className={s.projectsBlock} id={"projects"}>
             <div className={` ${styleContainer.container} ${s.projectsContainer}`}>
                 <Subtitle text={"Projects"}/>
                 <Title text={"Recent projects"}/>

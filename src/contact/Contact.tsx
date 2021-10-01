@@ -57,7 +57,7 @@ const Contact = () => {
     }
 
     return (
-        <div className={s.contact}>
+        <div className={s.contact} id={"contact"}>
             <div className={` ${styleContainer.container} ${s.contactContainer}`}>
                 <div className={s.contactForm}>
                     <Subtitle text={"Contact"}/>

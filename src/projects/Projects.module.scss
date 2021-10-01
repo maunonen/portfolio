@@ -3,6 +3,8 @@
 .projectsBlock {
   background-color: black;
   background-color: #1f1f20;
+  scroll-behavior: smooth !important;
+  -webkit-scroll-behavior:  smooth !important;
   @include paddingForContainer();
   /*padding: 100px 0;*/
 

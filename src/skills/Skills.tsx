@@ -4,10 +4,6 @@ import styleContainer from '../common/styles/Container.module.css'
 import Skill, {SkillPropsType} from '../skills/skill/Skill'
 import Title from "../common/components/title/Title";
 import Subtitle from "../common/components/subtitle/Subtitle";
-import GithubIcon from "../assets/svg/GithubIcon";
-import LinkedInIcon from "../assets/svg/LinkedInIcon";
-import EmailIcon from "../assets/svg/EmailIcon";
-import TelegramIcon from "../assets/svg/TelegramIcon";
 import DjangoIcon from "../assets/svg/DjangoIcon";
 import MongoIcon from "../assets/svg/MongoIcon";
 import NodeIcon from "../assets/svg/NodeIcon";
@@ -20,9 +16,6 @@ import CssIcon from "../assets/svg/CssIcon";
 import ExpressIcon from "../assets/svg/ExpressIcon";
 import PythonIcon from "../assets/svg/PythonIcon";
 import PostgresIcon from "../assets/svg/PostgresIcon";
-
-
-
 
 const skillList: Array<SkillPropsType> = [
     {
@@ -79,7 +72,7 @@ const skillList: Array<SkillPropsType> = [
 const Skills: React.FC = () => {
 
     return (
-        <div className={s.skillsBlock}>
+        <div id={"skills"} className={s.skillsBlock}>
             <div className={`${styleContainer.container} ${s.skillsContainer}`}>
                 <Subtitle text={"Skills"}/>
                 <Title text={"All skills"}/>
