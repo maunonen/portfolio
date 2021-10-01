@@ -5,14 +5,45 @@ import photoUrl from '../assets/img/myFoto.png'
 import testImage from '../assets/img/testImage.jpeg'
 import Subtitle from "../common/components/subtitle/Subtitle";
 import ArrowRightIcon from "../assets/svg/ArrowRightIcon";
+import Particles from "react-particles-js";
+import ReactTypingEffect from 'react-typing-effect';
+
+const particlesParams = {
+    "particles": {
+        "number": {
+            "value": 50
+        },
+        "size": {
+            "value": 3
+        }
+    },
+    "interactivity": {
+        "events": {
+            "onhover": {
+                "enable": true,
+                "mode": "repulse"
+            }
+        }
+    }
+}
 
 const Main: React.FC = () => {
     return (
-        <div className={s.mainBlock}>
+        <div id={"main"} className={s.mainBlock}>
+            <Particles
+                className={s.particles}
+                params={particlesParams}
+            />
             <div className={styleContainer.container}>
                 <div className={s.greetingBlock}>
                     <Subtitle text={"Portfolio"}/>
-                    <h1 className={s.title}>Alexander Maunonen</h1>
+                    <h1 className={s.title}>
+                        Alexander Maunonen
+                    </h1>
+                    <ReactTypingEffect
+                        text={"Fullstack Developer"}
+                        className={s.position}
+                    />
                     <div className={s.areas}>
                         <ul>
                             <li>
@@ -37,16 +68,15 @@ const Main: React.FC = () => {
                     </div>
                 </div>
                 <div className={s.photoBlock}>
-                {/*<div>*/}
                     <div className={s.photo}>
                         <div
                             className={s.pseudoParent}
                             style={{
-                           backgroundImage: `url(${testImage})`,
-                           backgroundPosition: 'center',
-                           backgroundSize: 'cover',
-                           backgroundRepeat: 'no-repeat',
-                       }}
+                                backgroundImage: `url(${testImage})`,
+                                backgroundPosition: 'center',
+                                backgroundSize: 'cover',
+                                backgroundRepeat: 'no-repeat',
+                            }}
                         >
                         </div>
                     </div>

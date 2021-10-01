@@ -5,16 +5,33 @@
   height: 100vh;
   background-color: $bgPrimaryColor;
 
+  .particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0.3;
+  }
+
   .greetingBlock {
     width: 300px;
 
     .title {
+      /*min-height: 125px;*/
       @include text($fontFamilyPrimary, 45px, 1.4);
       font-weight: 800;
       text-transform: uppercase;
     }
+    .position {
+      @include text($fontFamilyPrimary, 22px, 1.8);
+      font-weight: 400;
+      color: $fontColorGrey;
+      margin-bottom: 60px;
+    }
 
     .areas {
+      margin-top: 130px;
       ul {
         list-style-type: none;
         padding: 0px 0px;
