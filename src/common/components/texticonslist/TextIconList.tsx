@@ -1,6 +1,5 @@
 import React, {ButtonHTMLAttributes, ChangeEvent, DetailedHTMLProps, KeyboardEvent} from 'react';
 import s from './TextIconList.module.scss'
-import {ReactComponent} from "*.svg";
 
 export interface TextIconListPropsType {
     items: Array<IconListItemType>

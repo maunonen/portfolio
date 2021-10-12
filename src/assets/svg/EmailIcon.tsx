@@ -14,6 +14,8 @@ const EmailIcon: React.FC<EmailIconPropsType> = (props) => {
             xmlns="http://www.w3.org/2000/svg"
             x="0"
             y="0"
+            width={width ? width : "512"}
+            height={height ? height : "384"}
             version="1.1"
             viewBox="0 0 512 384"
             xmlSpace="preserve"

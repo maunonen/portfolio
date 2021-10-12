@@ -8,22 +8,26 @@ import StyledTextArea from "../common/components/textarea/StyledTextArea";
 import StyledButton from "../common/components/button/StyledButton";
 import TextIconList, {IconListItemType} from "../common/components/texticonslist/TextIconList";
 import ArrowRightIcon from "../assets/svg/ArrowRightIcon";
+import AddressIcon from "../assets/svg/AddressIcon";
+import EmailCharIcon from "../assets/svg/EmailCharIcon";
+import EmailIcon from "../assets/svg/EmailIcon";
+import GithubIcon from "../assets/svg/GithubIcon";
 
 const iconList: IconListItemType[] = [
     {
-        svgIcon: <ArrowRightIcon color={"#ff4522"}/>,
+        svgIcon: <AddressIcon width={"22"} height={"22"} color={"#ff4522"}/>,
         itemText: "Helsinki, Finland",
     },
     {
-        svgIcon: <ArrowRightIcon color={"#ff4522"}/>,
+        svgIcon: <GithubIcon color={"#ff4522"} width={"22"} height={"22"}/>,
+        itemText: "github.com",
+        itemLink : "https://github.com/maunonen"
+    },
+    {
+        svgIcon: <EmailCharIcon color={"#ff4522"}/>,
         itemText: "santari33@gmail.com",
         itemLink : "mailto:santari33@gmail.com"
 
-    },
-    {
-        svgIcon: <ArrowRightIcon color={"#ff4522"}/>,
-        itemText: "github.com",
-        itemLink : "https://github.com/maunonen"
     },
 ]
 

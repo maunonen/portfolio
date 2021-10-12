@@ -12,8 +12,8 @@ const GithubIcon: React.FC<EmailIconPropsType> = (props) => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="438.536"
-            height="438.536"
+            width={width ? width : "438.536"}
+            height={height ? height : "438.536"}
             x="0"
             y="0"
             enableBackground="new 0 0 438.536 438.536"
