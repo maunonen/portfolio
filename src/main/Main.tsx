@@ -1,8 +1,8 @@
 import React from 'react';
 import s from './Main.module.scss'
 import styleContainer from '../common/styles/Container.module.scss'
-import photoUrl from '../assets/img/myFoto.png'
-import testImage from '../assets/img/testImage.jpeg'
+/*import myPhoto from '../assets/img/myPhoto.jpg';*/
+import myPhotoWEB from '../assets/img/myPhotoWEB.jpg';
 import Subtitle from "../common/components/subtitle/Subtitle";
 import ArrowRightIcon from "../assets/svg/ArrowRightIcon";
 import Particles from "react-particles-js";
@@ -72,7 +72,7 @@ const Main: React.FC = () => {
                         <div
                             className={s.pseudoParent}
                             style={{
-                                backgroundImage: `url(${testImage})`,
+                                backgroundImage: `url(${myPhotoWEB})`,
                                 backgroundPosition: 'center',
                                 backgroundSize: 'cover',
                                 backgroundRepeat: 'no-repeat',
