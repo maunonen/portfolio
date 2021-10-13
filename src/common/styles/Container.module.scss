@@ -1,0 +1,13 @@
+.container {
+  scroll-behavior: smooth;
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  @media screen and (max-width: 972px) {
+    width: 90%;
+  }
+}

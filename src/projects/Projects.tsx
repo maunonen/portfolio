@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './Projects.module.scss';
-import styleContainer from '../common/styles/Container.module.css';
+import styleContainer from '../common/styles/Container.module.scss';
 import Project, {ProjectPropsType} from './project/Project';
 import rentalUrl from '../assets/img/rental.png';
 import stickerUrl from '../assets/img/sticker.png';

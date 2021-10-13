@@ -1,6 +1,6 @@
 import React, {ChangeEvent, useState, ReactComponentElement} from 'react';
 import s from './Contact.module.scss'
-import styleContainer from "../common/styles/Container.module.css";
+import styleContainer from "../common/styles/Container.module.scss";
 import Title from "../common/components/title/Title";
 import Subtitle from "../common/components/subtitle/Subtitle";
 import StyledInput from "../common/components/input/StyledInput";
@@ -64,8 +64,10 @@ const Contact = () => {
         <div className={s.contact} id={"contact"}>
             <div className={` ${styleContainer.container} ${s.contactContainer}`}>
                 <div className={s.contactForm}>
-                    <Subtitle text={"Contact"}/>
-                    <Title text={"Get in touch"}/>
+                    <div className={s.titleBlock}>
+                        <Subtitle text={"Contact"}/>
+                        <Title text={"Get in touch"}/>
+                    </div>
                     <div className={s.contactBlock}>
                         <div className={s.contactInfoBlock}>
                             <div className={s.details}>
@@ -77,7 +79,7 @@ const Contact = () => {
                             <TextIconList items={iconList}/>
                         </div>
                         <div className={s.contactFormBlock}>
-                            <form onSubmit={handleSubmit}>
+                            <form onSubmit={handleSubmit} className={s.formContainer}>
                                 <StyledInput
                                     onChangeText={setSubject}
                                     placeholder={"Subject"}

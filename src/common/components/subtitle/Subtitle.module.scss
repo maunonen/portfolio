@@ -1,6 +1,9 @@
 @import "./src/common/styles/sass/variables";
 @import "./src/common/styles/sass/mixin";
 .subtitle {
+    @media screen and (max-width: 375px) {
+        display : none;
+    }
     h3 {
         @include text($subTitleFont, 18px, 1.8);
         text-transform: capitalize;

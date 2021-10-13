@@ -12,6 +12,9 @@
     bottom: 0;
     right: 0;
     opacity: 0.3;
+    @media screen and (max-width: 778px) {
+      display: none;
+    }
   }
 
   .greetingBlock {
@@ -22,6 +25,11 @@
       @include text($fontFamilyPrimary, 45px, 1.4);
       font-weight: 800;
       text-transform: uppercase;
+      @media screen and (max-width: 375px) {
+        @include text($fontFamilyPrimary, 38px, 1.2);
+        font-weight: 800;
+        text-transform: uppercase;
+      }
     }
     .position {
       @include text($fontFamilyPrimary, 22px, 1.8);
@@ -58,19 +66,34 @@
 
   .photoBlock {
     .photo {
-      background: green;
+      /*background: green;*/
       position: relative;
       height: 530px;
       width: 400px;
       border-radius: 8px;
       transform: rotate(8deg);
       z-index: 1;
+      @media screen and (max-width: 972px) {
+        transform: none;
+        position: static;
+        display: flex;
+        flex-wrap: wrap;
+        flex-grow: 1;
+        width: 70%;
+      }
+      @media screen and (max-width: 778px) {
+        display: none;
+      }
 
       .pseudoParent {
         position: absolute;
         height: 530px;
         width: 400px;
         border-radius: 8px;
+        @media screen and (max-width: 972px) {
+          position: static;
+          /*display: none;*/
+        }
 
         &:after {
           position: absolute;
@@ -83,6 +106,9 @@
           bottom: -30px;
           border-radius: 8px;
           transform: rotate(-12deg);
+          @media screen and (max-width: 972px) {
+            display: none;
+          }
         }
       }
     }

@@ -1,6 +1,6 @@
 import React, {ChangeEvent, useState} from 'react';
 import s from './FooterColumn.module.css'
-import styleContainer from "../../common/styles/Container.module.css"
+import styleContainer from "../../common/styles/Container.module.scss"
 
 export interface FooterItemType {
     itemLink: string

@@ -1,7 +1,7 @@
 import React from 'react';
 import s from './Header.module.scss'
 import Nav from "../nav/Nav";
-import styleContainer from "../common/styles/Container.module.css";
+import styleContainer from "../common/styles/Container.module.scss";
 
 const  Header : React.FC = () => {
     return (

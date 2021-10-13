@@ -9,4 +9,10 @@
 }
 @mixin paddingForContainer() {
   padding: 140px 0;
+  @media screen and (max-width: 624px) {
+    padding: 40px 0;
+  }
+  /*@media screen and (max-width: 624px) {
+    padding: 40px 0;
+  }*/
 }

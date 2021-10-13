@@ -1,6 +1,6 @@
 import React, {ChangeEvent, useState} from 'react';
 import s from './Footer.module.scss'
-import styleContainer from "../common/styles/Container.module.css";
+import styleContainer from "../common/styles/Container.module.scss";
 import FooterColumn, {FooterItemType} from "./footerColumn/FooterColumn";
 import Title from "../common/components/title/Title";
 import IconList, {IconListItemType, IconListPropsType} from "../common/components/iconlist/IconList";
