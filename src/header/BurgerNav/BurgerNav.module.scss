@@ -25,8 +25,10 @@
     right: 0;
     left: 0;
     top: 0;
-
-    display: none;
+    @include flex(column, space-between, center, nowrap);
+    transform: translate(0, -160px);
+    transition: 0.7s;
+/*    display: none;*/
 
     a {
       @include text($fontFamilyPrimary, 16px, 1.2);
@@ -46,7 +48,8 @@
   }
 
   .showMenu {
-    @include flex(column, space-between, center, nowrap);
+    transform: translate(0, 0);
+    /*@include flex(column, space-between, center, nowrap);*/
   }
 
 
