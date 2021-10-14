@@ -7,11 +7,10 @@ import StyledInput from "../common/components/input/StyledInput";
 import StyledTextArea from "../common/components/textarea/StyledTextArea";
 import StyledButton from "../common/components/button/StyledButton";
 import TextIconList, {IconListItemType} from "../common/components/texticonslist/TextIconList";
-import ArrowRightIcon from "../assets/svg/ArrowRightIcon";
 import AddressIcon from "../assets/svg/AddressIcon";
 import EmailCharIcon from "../assets/svg/EmailCharIcon";
-import EmailIcon from "../assets/svg/EmailIcon";
 import GithubIcon from "../assets/svg/GithubIcon";
+import {emailAPI, NewMessageType} from "../api/api";
 
 const iconList: IconListItemType[] = [
     {
@@ -21,43 +20,59 @@ const iconList: IconListItemType[] = [
     {
         svgIcon: <GithubIcon color={"#ff4522"} width={"22"} height={"22"}/>,
         itemText: "github.com",
-        itemLink : "https://github.com/maunonen"
+        itemLink: "https://github.com/maunonen"
     },
     {
         svgIcon: <EmailCharIcon color={"#ff4522"}/>,
         itemText: "santari33@gmail.com",
-        itemLink : "mailto:santari33@gmail.com"
+        itemLink: "mailto:santari33@gmail.com"
 
     },
 ]
 
 
 const Contact = () => {
-    const [subject, setSubject] = useState<string | undefined>()
-    const [name, setName] = useState<string | undefined>()
-    const [message, setMessage] = useState<string | undefined>()
+    const [subject, setSubject] = useState<string>('')
+    const [email, setEmail] = useState<string>('')
+    const [message, setMessage] = useState<string>('')
 
-    const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+    /*const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
         let value = e.currentTarget.value;
         if (e.currentTarget.dataset.contact) {
             const trigger: string = e.currentTarget.dataset.contact;
-            if (trigger === 'name') {
-                setName(value);
+            if (trigger === 'email') {
+                setEmail(value);
             } else if (trigger === 'subject') {
                 setSubject(value);
+            }else if (trigger === 'message') {
+                setMessage(value);
             }
         }
-    }
+    }*/
 
-    const handleArea = (e: ChangeEvent<HTMLTextAreaElement>) => {
+    /*const handleArea = (e: ChangeEvent<HTMLTextAreaElement>) => {
         if (e.target.value) {
             setMessage(e.target.value)
         }
-    }
+    }*/
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        console.log('Print value', name, subject, message);
+        const messageObject: NewMessageType = {
+            ...({subject}),
+            ...({email}),
+            ...({message}),
+        }
+        emailAPI.sendMessage(messageObject)
+            .then(res => {
+                setMessage('');
+                setEmail('');
+                setSubject('');
+                console.log("Your message has been successfully sent.");
+            })
+            .catch( err => {
+                console.log("Something went wrong", err);
+            });
     }
 
     return (
@@ -81,17 +96,20 @@ const Contact = () => {
                         <div className={s.contactFormBlock}>
                             <form onSubmit={handleSubmit} className={s.formContainer}>
                                 <StyledInput
+                                    /*datatype={"email"}*/
+                                    onChangeText={setEmail}
+                                    placeholder={"Email"}
+                                    value={email}
+                                />
+                                <StyledInput
+                                    /*datatype={"subject"}*/
                                     onChangeText={setSubject}
                                     placeholder={"Subject"}
                                     value={subject}
                                     /*error={"some error"}*/
                                 />
-                                <StyledInput
-                                    onChangeText={setName}
-                                    placeholder={"Name"}
-                                    value={name}
-                                />
                                 <StyledTextArea
+                                    /*datatype={"message"}*/
                                     onChangeText={setMessage}
                                     value={message}
                                     rows={4}
