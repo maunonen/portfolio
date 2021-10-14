@@ -1,5 +1,5 @@
-@import "./src/common/styles/sass/variables";
-@import "./src/common/styles/sass/mixin";
+@import "../../common/styles/sass/variables";
+@import "../../common/styles/sass/mixin";
 
 .nav {
     /*border: 1px solid;*/
@@ -24,6 +24,9 @@
         .activeLink {
             color: $bgColorError;
         }
+    }
+    @media screen and (max-width: 400px) {
+        display: none;
     }
 }
 .nav_list {

@@ -7,6 +7,7 @@
   color: $textColor;
   font-weight: 400;
 }
+
 @mixin paddingForContainer() {
   padding: 140px 0;
   @media screen and (max-width: 624px) {
@@ -15,4 +16,12 @@
   /*@media screen and (max-width: 624px) {
     padding: 40px 0;
   }*/
+}
+
+@mixin flex($column, $justify, $align , $wrap) {
+  display: flex;
+  flex-direction: $column;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
 }
