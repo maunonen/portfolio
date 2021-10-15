@@ -1,7 +1,8 @@
 import axios from 'axios'
 
 const instance = axios.create({
-    baseURL: 'http://localhost:3002/',
+    /*baseURL: 'http://localhost:3002/',*/
+    baseURL: '/api/',
 })
 
 export interface NewMessageType {
@@ -12,6 +13,6 @@ export interface NewMessageType {
 
 export const emailAPI = {
     sendMessage(messageObject: NewMessageType ) {
-        return instance.post<any>("/api/message", messageObject);
+        return instance.post<any>("/message", messageObject);
     },
 }
