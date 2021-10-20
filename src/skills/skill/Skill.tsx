@@ -1,9 +1,6 @@
 import React from 'react';
 import s from './Skill.module.scss'
-import TelegramIcon from "../../assets/svg/TelegramIcon";
 import CornerUrl from '../../../src/assets/img/corner.png';
-import EmailIcon from "../../assets/svg/EmailIcon";
-import GithubIcon from "../../assets/svg/GithubIcon";
 
 export interface SkillPropsType {
     title: string
@@ -23,7 +20,7 @@ const Skill: React.FC<SkillPropsType> = (props) => {
                 <span className={s.description}>{description}</span>
             </div>
             <div className={s.corner}>
-                <img src={CornerUrl}/>
+                <img alt={"skill title"} src={CornerUrl}/>
             </div>
         </div>
     );

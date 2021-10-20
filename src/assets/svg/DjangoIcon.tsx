@@ -1,5 +1,4 @@
 import React from "react";
-import {ArrowRightIconRpopsType} from "./ArrowRightIcon";
 
 export interface DjangoIconPropsType {
     color?: string
@@ -8,7 +7,7 @@ export interface DjangoIconPropsType {
 }
 
 const DjangoIcon: React.FC<DjangoIconPropsType> = (props) => {
-    const {color, width, height} = props
+    const {color} = props
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"

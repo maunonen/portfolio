@@ -1,5 +1,4 @@
 import React from "react";
-import {ArrowRightIconRpopsType} from "./ArrowRightIcon";
 
 export interface TelegramIconPropsType {
     color?: string

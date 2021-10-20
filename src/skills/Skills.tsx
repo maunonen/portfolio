@@ -78,14 +78,9 @@ const Skills: React.FC = () => {
                 <Title text={"All skills"}/>
                 <div className={s.skills}>
                     {skillList && skillList.map((skill, index) => (
-                        <Skill svgIcon={skill.svgIcon} title={skill.title}
+                        <Skill key={index} svgIcon={skill.svgIcon} title={skill.title}
                                description={skill.description}/>
                     ))}
-
-                    {/*<Skill svgIcon={<GithubIcon/>} title={"React"} description={"Lorem ipsum dolor sit amet consectetur adipisicing elit. " +
-                    "Maxime mollitia, molestiae quas vel sint, molestiae quas vel sint " }/>
-                    <Skill svgIcon={<GithubIcon/>} title={"HTML/CSS"} description={"Lorem ipsum dolor sit amet consectetur adipisicing elit. " +
-                    "Maxime mollitia, molestiae quas vel sint, molestiae quas vel sint " }/>*/}
                 </div>
             </div>
         </div>

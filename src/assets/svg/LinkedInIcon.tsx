@@ -8,7 +8,7 @@ export interface LinkedInIconPropsType {
 }
 
 const LinkedInIcon: React.FC<EmailIconPropsType> = (props) => {
-    const {color, width, height} = props
+    const {color} = props
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"

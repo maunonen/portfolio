@@ -1,5 +1,4 @@
 import React from "react";
-import {ArrowRightIconRpopsType} from "./ArrowRightIcon";
 
 export interface IconPropsType {
     color?: string
@@ -8,7 +7,7 @@ export interface IconPropsType {
 }
 
 const PostgresIcon: React.FC<IconPropsType> = (props) => {
-    const {color, width, height} = props
+    const {color} = props
     return (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <g fill={color ? color : "#fff"}>

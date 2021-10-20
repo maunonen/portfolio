@@ -1,17 +1,19 @@
 import React from 'react';
 import s from './Project.module.scss'
-import rentalProject from '../../assets/img/rental.png';
 
-export interface ProjectPropsType {
+export interface ProjectType {
     title: string
     projectUrl?: string
     description?: string
     imageUrl?: string
     imageAlt?: string
 }
+export interface ProjectPropsType {
+    project : ProjectType
+}
 
 const Project: React.FC<ProjectPropsType> = (props) => {
-    const {title, description, imageAlt, imageUrl} = props
+    const {title, description, imageUrl, projectUrl} = props.project
     return (
         <div className={s.project} style={{
             backgroundImage: `url(${imageUrl})`,
@@ -22,7 +24,7 @@ const Project: React.FC<ProjectPropsType> = (props) => {
 
             <div className={s.hoverBlock}>
                 <div className={s.hoverContentBlock}>
-                    <a className={s.preview} href={"#"}>
+                    <a target="_blank" className={s.preview} href={projectUrl ? projectUrl : "#"}>
                         <h3 className={s.title}>{title}</h3>
                     </a>
                     <span className={s.description}>{description}</span>

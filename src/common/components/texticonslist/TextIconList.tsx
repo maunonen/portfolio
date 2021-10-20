@@ -1,4 +1,4 @@
-import React, {ButtonHTMLAttributes, ChangeEvent, DetailedHTMLProps, KeyboardEvent} from 'react';
+import React from 'react';
 import s from './TextIconList.module.scss'
 
 export interface TextIconListPropsType {

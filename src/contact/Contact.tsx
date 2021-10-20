@@ -1,4 +1,4 @@
-import React, {ChangeEvent, useState, ReactComponentElement} from 'react';
+import React, {useState} from 'react';
 import s from './Contact.module.scss'
 import styleContainer from "../common/styles/Container.module.scss";
 import Title from "../common/components/title/Title";
@@ -35,26 +35,6 @@ const Contact = () => {
     const [subject, setSubject] = useState<string>('')
     const [email, setEmail] = useState<string>('')
     const [message, setMessage] = useState<string>('')
-
-    /*const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
-        let value = e.currentTarget.value;
-        if (e.currentTarget.dataset.contact) {
-            const trigger: string = e.currentTarget.dataset.contact;
-            if (trigger === 'email') {
-                setEmail(value);
-            } else if (trigger === 'subject') {
-                setSubject(value);
-            }else if (trigger === 'message') {
-                setMessage(value);
-            }
-        }
-    }*/
-
-    /*const handleArea = (e: ChangeEvent<HTMLTextAreaElement>) => {
-        if (e.target.value) {
-            setMessage(e.target.value)
-        }
-    }*/
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();

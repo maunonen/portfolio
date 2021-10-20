@@ -1,11 +1,10 @@
-import React, {ChangeEvent, DetailedHTMLProps, InputHTMLAttributes, KeyboardEvent, TextareaHTMLAttributes} from 'react';
+import React, {ChangeEvent, DetailedHTMLProps, KeyboardEvent, TextareaHTMLAttributes} from 'react';
 import s from './StyledTextArea.module.scss'
 
-/*ChangeEvent<HTMLTextAreaElement>*/
 
 type DefaultInputPropsType = DetailedHTMLProps<TextareaHTMLAttributes<HTMLTextAreaElement>, HTMLTextAreaElement>
 
-export interface StyledInputTextPropsType extends DefaultInputPropsType { // и + ещё пропсы которых нет в стандартном инпуте
+export interface StyledInputTextPropsType extends DefaultInputPropsType {
     onChangeText?: (value: string) => void
     onEnter?: () => void
     error?: string

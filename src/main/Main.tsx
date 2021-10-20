@@ -1,7 +1,6 @@
 import React from 'react';
 import s from './Main.module.scss'
 import styleContainer from '../common/styles/Container.module.scss'
-/*import myPhoto from '../assets/img/myPhoto.jpg';*/
 import myPhotoWEB from '../assets/img/myPhotoWEB.jpg';
 import Subtitle from "../common/components/subtitle/Subtitle";
 import ArrowRightIcon from "../assets/svg/ArrowRightIcon";
@@ -48,19 +47,19 @@ const Main: React.FC = () => {
                         <ul>
                             <li>
                                 <div className={s.arrowSvg}>
-                                    <a href={"#"} className={s.profileTitle}>React/Redux</a>
+                                    <span className={s.profileTitle}>React/Redux</span>
                                     <ArrowRightIcon/>
                                 </div>
                             </li>
                             <li>
                                 <div className={s.arrowSvg}>
-                                    <a href={"#"} className={s.profileTitle}>Node.js/Express</a>
+                                    <span className={s.profileTitle}>Node.js/Express</span>
                                     <ArrowRightIcon/>
                                 </div>
                             </li>
                             <li>
                                 <div className={s.arrowSvg}>
-                                    <a href={"#"} className={s.profileTitle}>Django/Python</a>
+                                    <span className={s.profileTitle}>Django/Python</span>
                                     <ArrowRightIcon/>
                                 </div>
                             </li>

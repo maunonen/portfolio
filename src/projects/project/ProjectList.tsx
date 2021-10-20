@@ -1,11 +1,9 @@
 import React from 'react';
-import s from './Project.module.scss'
-import rentalProject from '../../assets/img/rental.png';
-import Project, {ProjectPropsType} from "./Project";
+import Project, {ProjectType} from "./Project";
 
 
 export interface ProjectListPropsType {
-    projectList: Array<ProjectPropsType>
+    projectList: Array<ProjectType>
 }
 
 const ProjectList: React.FC<ProjectListPropsType> = (props) => {
@@ -16,10 +14,8 @@ const ProjectList: React.FC<ProjectListPropsType> = (props) => {
                 projectList && projectList.map((project, index) => {
                     return (
                         <Project
-                            title={project.title}
-                            description={project.description}
-                            imageUrl={project.imageUrl}
-                            imageAlt={project.imageAlt}
+                            key={index}
+                            project={project}
                         />
 
                     )
