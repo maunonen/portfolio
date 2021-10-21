@@ -8,8 +8,9 @@ export interface ProjectType {
     imageUrl?: string
     imageAlt?: string
 }
+
 export interface ProjectPropsType {
-    project : ProjectType
+    project: ProjectType
 }
 
 const Project: React.FC<ProjectPropsType> = (props) => {
@@ -24,9 +25,13 @@ const Project: React.FC<ProjectPropsType> = (props) => {
 
             <div className={s.hoverBlock}>
                 <div className={s.hoverContentBlock}>
-                    <a target="_blank" className={s.preview} href={projectUrl ? projectUrl : "#"}>
-                        <h3 className={s.title}>{title}</h3>
-                    </a>
+                    {
+                        projectUrl ? (<a target="_blank" className={s.preview} href={projectUrl ? projectUrl : "#"}>
+                                <h3 className={s.title}>{title}</h3>
+                            </a>) :
+                            (<h3 className={s.title}>{title}</h3>)
+                    }
+
                     <span className={s.description}>{description}</span>
                 </div>
             </div>
